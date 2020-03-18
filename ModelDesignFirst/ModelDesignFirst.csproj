@@ -217,6 +217,10 @@
     <Compile Include="SelfReferenceCodeFirst\Business.cs" />
     <Compile Include="SelfReferenceCodeFirst\BusinessContext.cs" />
     <Compile Include="SelfReferenceCodeFirst\ECommerce.cs" />
+    <Compile Include="SelfReferenceCodeFirst\Employee.cs" />
+    <Compile Include="SelfReferenceCodeFirst\EmployeeContext.cs" />
+    <Compile Include="SelfReferenceCodeFirst\FullTimeEmployee.cs" />
+    <Compile Include="SelfReferenceCodeFirst\HourlyEmployee.cs" />
     <Compile Include="SelfReferenceCodeFirst\PhotographContext.cs" />
     <Compile Include="SelfReferenceCodeFirst\Photograph.cs" />
     <Compile Include="SelfReferenceCodeFirst\PhotographFullImage.cs" />
