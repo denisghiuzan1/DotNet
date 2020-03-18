@@ -4,17 +4,17 @@ using DbContext = System.Data.Entity.DbContext;
 
 namespace ModelDesignFirst.SelfReferenceCodeFirst
 {
-    public class ProductEntity : DbContext
+    public class ProductContext : DbContext
     {
-        public Microsoft.EntityFrameworkCore.DbSet<Product> Products { get; set; }
-        public ProductEntity() : base("name=ProductEntity")
+        public System.Data.Entity.DbSet<Product> Products { get; set; }
+        public ProductContext() : base("name=SelfReferenceModel")
         { }
 
-        protected void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=EfCore2020;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
-            //ChangeTracker.LazyLoadingEnabled = false;
-        }
+        //protected void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=EfCore2020;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+        //    //ChangeTracker.LazyLoadingEnabled = false;
+        //}
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

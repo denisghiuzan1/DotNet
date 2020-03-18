@@ -214,10 +214,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SelfReferenceCodeFirst\Business.cs" />
+    <Compile Include="SelfReferenceCodeFirst\BusinessContext.cs" />
+    <Compile Include="SelfReferenceCodeFirst\ECommerce.cs" />
+    <Compile Include="SelfReferenceCodeFirst\PhotographContext.cs" />
+    <Compile Include="SelfReferenceCodeFirst\Photograph.cs" />
+    <Compile Include="SelfReferenceCodeFirst\PhotographFullImage.cs" />
     <Compile Include="SelfReferenceCodeFirst\Product.cs" />
-    <Compile Include="SelfReferenceCodeFirst\ProductEntity.cs" />
+    <Compile Include="SelfReferenceCodeFirst\ProductContext.cs" />
+    <Compile Include="SelfReferenceCodeFirst\Retail.cs" />
     <Compile Include="SelfReferenceCodeFirst\SelfReference.cs" />
     <Compile Include="SelfReferenceCodeFirst\SelfReferenceModel.cs" />
+    <Compile Include="SelfReferenceCodeFirst\TestProgram.cs" />
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="Model1.edmx">

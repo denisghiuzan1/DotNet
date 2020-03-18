@@ -8,89 +8,22 @@ namespace ModelDesignFirst
 {
     internal class Program
     {
-        private static void Main(string[] args)
-        {
-            //Console.WriteLine("Test Model Designer First");
-            //TestPerson();
-            //TestOneToMany();
-            //TestManyToMany();
+        //private static void Main(string[] args)
+        //{
+        //    //Console.WriteLine("Test Model Designer First");
+        //    //TestPerson();
+        //    //TestOneToMany();
+        //    //TestManyToMany();
 
-            //TestSelfReference();
+        //    //TestSelfReference();
 
-            TestVerticalSplitting();
-            Console.ReadKey();
-        }
+        //    //TestVerticalSplitting();
+        //    //TestSplitting();
+        //    TestProgram.TestMostenireTip();
+        //    Console.ReadKey();
+        //}
 
-        private static void TestSelfReference()
-        {
-            using (var context = new SelfReferenceModel())
-            {
-                var self = new SelfReference();
-                Console.WriteLine("Self referencing test");
-                Console.WriteLine("Name: ");
-                self.Name = Console.ReadLine();
-
-
-                context.SelfReferences.Add(self);
-                context.SaveChanges();
-
-                var items = context.SelfReferences.ToList();
-                foreach (var item in items)
-                {
-                    Console.WriteLine(item.Name);
-                    foreach (var reference in item.References)
-                    {
-                        Console.WriteLine("reference: {0}",reference.Name);
-                    }
-                }
-            }
-        }
-
-        private static void TestVerticalSplitting()
-        {
-            using (var context = new ProductEntity())
-            {
-                var product = new Product
-                {
-                    SKU = 147,
-                    Description = "Expandable Hydration Pack",
-                    Price = 19.97M,
-                    ImageURL = "/pack147.jpg"
-                };
-                context.Products.Add(product);
-                product = new Product
-                {
-                    SKU = 178,
-                    Description = "Rugged Ranger Duffel Bag",
-                    Price = 39.97M,
-                    ImageURL = "/pack178.jpg"
-                };
-                context.Products.Add(product);
-                product = new Product
-                {
-                    SKU = 186,
-                    Description = "Range Field Pack",
-                    Price = 98.97M,
-                    ImageURL = "/noimage.jp"
-                };
-                context.Products.Add(product);
-                product = new Product
-                {
-                    SKU = 202,
-                    Description = "Small Deployment Back Pack",
-                    Price = 29.97M,
-                    ImageURL = "/pack202.jpg"
-                };
-                context.Products.Add(product);
-                context.SaveChanges();
-
-                foreach (var p in context.Products)
-                {
-                    Console.WriteLine("{0} {1} {2} {3}", p.SKU, p.Description,
-                        p.Price.ToString("C"), p.ImageURL);
-                }
-            }
-        }
+        
 
         private static void TestPerson()
         {
