@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 03/10/2020 19:02:43
+-- Date Created: 03/23/2020 10:45:48
 -- Generated from EDMX file: C:\Users\dghiuzan\source\repos\EFDesignFirst\EFDesignFirst\Model1.edmx
 -- --------------------------------------------------
 
@@ -60,8 +60,8 @@ GO
 -- Creating table 'Orders'
 CREATE TABLE [dbo].[Orders] (
     [OrderId] int IDENTITY(1,1) NOT NULL,
-    [TotalValue] nvarchar(max)  NOT NULL,
-    [Date] nvarchar(max)  NOT NULL,
+    [TotalValue] int  NOT NULL,
+    [Date] datetime  NOT NULL,
     [CustomerCustomerId] int  NOT NULL
 );
 GO
